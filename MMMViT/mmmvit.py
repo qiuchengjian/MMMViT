@@ -471,18 +471,3 @@ class Model(nn.Module):
         if self.is_training:
             return fuse_pred, (flair_pred, t1ce_pred, t1_pred, t2_pred), preds
         return fuse_pred
-
-
-if __name__=="__main__":
-    a = Model()
-    b = torch.rand((1,4,128,128,128))
-    mask_array = np.array([[True, False, False, False], [False, True, False, False], [False, False, True, False],
-                           [False, False, False, True],
-                           [True, True, False, False], [True, False, True, False], [True, False, False, True],
-                           [False, True, True, False], [False, True, False, True], [False, False, True, True],
-                           [True, True, True, False], [True, True, False, True], [True, False, True, True],
-                           [False, True, True, True],
-                           [True, True, True, True]])
-    mask = torch.unsqueeze(torch.from_numpy(mask_array[0]), dim=0)
-    c = a(b,mask)
-    print(c.shape)
