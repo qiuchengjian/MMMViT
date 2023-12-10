@@ -21,6 +21,4 @@ python train.py --batch_size=1 --datapath $datapath --savepath $savepath --num_e
 #resume='/media/image522/221D883AB7DA6CE4/qcj/mmFormer/DB/model_path/model_last.pth'
 #python train.py --batch_size=1 --datapath $datapath --savepath $savepath --num_epochs 0 --dataname $dataname --resume $resume
 
-#师弟，我这个修改论文比较急，一张显卡同事跑多个实验比较慢，我就用两天
-
 
